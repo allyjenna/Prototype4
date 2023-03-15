@@ -4,7 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ScreenSwitch : MonoBehaviour
-{
+{ 
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Mushroom"))
@@ -19,5 +29,7 @@ public class ScreenSwitch : MonoBehaviour
         {
             SceneManager.LoadScene(3);
         }
+
+       
     }
 }
